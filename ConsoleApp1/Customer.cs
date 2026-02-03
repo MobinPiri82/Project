@@ -10,6 +10,8 @@ namespace Repo {
         public int NationalCode { get; set; }
         [Required]  
         public DateTime Birthday { get; set; }
+        [Required]
+        public string Address { get; set; }
     }
 }
     
