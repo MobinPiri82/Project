@@ -5,7 +5,9 @@ namespace Repo {
     public class Customer
     {
         [Required]
-        public string Name { get; set; }
+        public int Id { get; set; }
+        [Required]
+        public string CustomerName { get; set; }
         [Required]
         public int NationalCode { get; set; }
         [Required]  
@@ -13,5 +15,17 @@ namespace Repo {
         [Required]
         public string Address { get; set; }
     }
+
+
+    public class Product
+        {
+        [Required]
+        public int Id { get; set; }
+
+        public string ProductName { get; set; }
+            public double Price { get; set; }
+            public string Seller{ get; set; }
+        
+        }
 }
     

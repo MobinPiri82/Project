@@ -395,31 +395,49 @@ enum M
     Known,
 }
 
-namespace Arr{
-    class Program
-    {
-        static void Main(string[] args)
-        {
+//namespace Arr{
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
 
-            List<string> Number = new List<string> { "Mobin", "Amin", "Hossein" };
-            //Number[0] = "1";
-            //Console.WriteLine(Number.Any(x => x == "Mobin"));
-            string Name = "Moar";
-            //Console.WriteLine (Name.Split("o"));
-            //foreach(var part in Name.Split("o"))
-            //    Console.WriteLine (part);
+//            List<string> Number = new List<string> { "Mobin", "Amin", "Hossein" };
+//            //Number[0] = "1";
+//            //Console.WriteLine(Number.Any(x => x == "Mobin"));
+//            string Name = "Moar";
+//            //Console.WriteLine (Name.Split("o"));
+//            //foreach(var part in Name.Split("o"))
+//            //    Console.WriteLine (part);
 
-            Number.Append("A");
-            foreach (string str in Number)
-            {
-                Console.WriteLine(str);
-            }
-        }
+//            Number.Append("A");
+//            foreach (string str in Number)
+//            {
+//                Console.WriteLine(str);
+//            }
+//        }
         
+//    }
+//}
+
+namespace Repo
+{
+    class program
+    {
+
+        static void Main (string[] args)
+        {
+            using var db = new AppDbContext ();
+            db.Products.Add(new Product
+            {
+                ProductName = "Test",
+                Price = 135.156,
+                Seller = "Mobin"
+
+            });
+            db.SaveChanges ();
+        }
     }
 }
-
-
 
 
 

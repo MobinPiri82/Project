@@ -1,10 +1,13 @@
 ﻿//using Microsoft.EntityFrameworkCore.Tools;
+using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 namespace Repo {
     public class Book
     {
+        [Required]
+        public int Id { get; set; }
         [Required][MaxLength(100)]
-        public string Name { get; set; }
+        public string BookName { get; set; }
         [Required]
         public string Publisher { get; set; }
         [Required]
